@@ -1,38 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  
+  max-width: 900px; 
+  padding: 20px;
+}
+h1 {
+  font-size: 36px; 
+  color: #007bff; 
+  text-align: center; 
+  margin-top: 20px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance {
+  background-color: #007bff; 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffffff; 
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+
 }
 
-.App-link {
-  color: #61dafb;
+
+.balance h2 {
+  font-size: 24px; 
+  margin: 10px 0; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.transaction-history {
+  background-color: #ffffff; 
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px; 
+}
+
+.transaction-history h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0074e4; /* Blue text color */
+}
+
+
+.transactionul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.transactionli {
+  background-color: #f2f2f2; 
+  border-radius: 5px; 
+  margin-bottom: 10px; 
+  padding: 10px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+
+  
+  &:hover {
+    background-color: #e0e0e0; 
+    transform: translateY(-2px); 
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.transactionli span {
+  font-weight: bold; 
+  font-size: px; 
+  color: #333; 
+  margin-right: 10px; 
+}
+
+
+.transactionli span.amount {
+  color: #ff5733; 
+}
+
+
+.transactionli:hover {
+  background-color: #e0e0e0; 
+  transition: background-color 0.2s ease-in-out; 
+}
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .balance,
+  .transaction-history {
+    width: 90%; 
+  }
+}
+
+/* Media query for screens narrower than 480px */
+@media (max-width: 480px) {
+  .App {
+    padding: 5px;
+  }
+  .balance,
+  .transaction-history {
+    width: 100%; 
+    padding: 10px; 
   }
 }
