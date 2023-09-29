@@ -1,7 +1,7 @@
 {
   "name": "expensetrackerapp",
   "version": "0.1.0",
-  "homepage":"https:// Chissypre.github.io/expensetrackerapp",
+  "homepage":"https://Chissypre.github.io/expensetrackerapp",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
