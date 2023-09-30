@@ -1,0 +1,41 @@
+ .transactionli {
+    background-color: #f2f2f2; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+  
+    
+    &:hover {
+      background-color: #e0e0e0; 
+      transform: translateY(-2px); 
+    }
+  }
+  
+  .transactionli span {
+    font-weight: bold; 
+    font-size: px; 
+    color: #333; 
+    margin-right: 10px; 
+  }
+  
+  
+  .red {
+    color: #ff5733; 
+    font-weight: 600;
+  }
+  
+  .green {
+    color: #22eb87; 
+    font-weight: 600;
+  }
+  
+  
+  .transactionli:hover {
+    background-color: #e0e0e0; 
+    transition: background-color 0.2s ease-in-out; 
+  } 

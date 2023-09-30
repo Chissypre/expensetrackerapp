@@ -4,6 +4,12 @@ body {
   padding: 0;
   background-color: #f0f0f0;
   overflow-x: hidden;
+  background-image: url('../src/assets/subtle-prism.svg'); 
+  background-repeat: no-repeat;
+  background-size:cover; 
+  width: 100%;
+  /* background-position: center center;  */
+  
 }
 
 .App {
@@ -20,102 +26,7 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
-.balance {
-  background-color: #007bff; 
-  display: flex;
-  flex-direction: column;
-  color: #ffffff; 
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; 
-  margin-bottom: 20px; 
-
-}
 
 
-.balance h2 {
-  font-size: 24px; 
-  margin: 10px 0; 
-}
 
 
-.transaction-history {
-  background-color: #ffffff; 
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; 
-}
-
-.transaction-history h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #0074e4; /* Blue text color */
-}
-
-
-.transactionul {
-  list-style-type: none; 
-  padding: 0; 
-}
-
-.transactionli {
-  background-color: #f2f2f2; 
-  border-radius: 5px; 
-  margin-bottom: 10px; 
-  padding: 10px; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
-
-  
-  &:hover {
-    background-color: #e0e0e0; 
-    transform: translateY(-2px); 
-  }
-}
-
-.transactionli span {
-  font-weight: bold; 
-  font-size: px; 
-  color: #333; 
-  margin-right: 10px; 
-}
-
-
-.transactionli span.amount {
-  color: #ff5733; 
-}
-
-
-.transactionli:hover {
-  background-color: #e0e0e0; 
-  transition: background-color 0.2s ease-in-out; 
-}
-@media (max-width: 768px) {
-  .App {
-    padding: 10px;
-  }
-
-  .balance,
-  .transaction-history {
-    width: 90%; 
-  }
-}
-
-/* Media query for screens narrower than 480px */
-@media (max-width: 480px) {
-  .App {
-    padding: 5px;
-  }
-  .balance,
-  .transaction-history {
-    width: 100%; 
-    padding: 10px; 
-  }
-}

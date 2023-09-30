@@ -1,0 +1,43 @@
+.transaction-history {
+    background-color: #ffffff; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+  }
+  
+  .transaction-history h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0074e4; /* Blue text color */
+  }
+  
+  
+  .transactionul {
+    list-style-type: none; 
+    padding: 0; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .App {
+      padding: 10px;
+    }
+  
+    
+    .transaction-history {
+      width: 90%; 
+    }
+  }
+  
+  /* Media query for screens narrower than 480px */
+  @media (max-width: 480px) {
+    .App {
+      padding: 5px;
+    }
+    .transaction-history {
+      width: 90%; 
+      padding: 10px; 
+    }
+  }

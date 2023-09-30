@@ -1,7 +1,28 @@
+import React, { useState, useContext } from 'react';
 import './AddTransaction.styles.css';
-const AddTransaction = ({addTransaction, text, setText, amount, setAmount,transactionType, settransactionType }) => {
+import { GlobalContext } from '../context/Globalstate';
+
+const AddTransaction = () => {
+const [text, setText] = useState('');
+const [amount, setAmount] = useState('');
+const [transactionType, settransactionType] = useState('Expenses');
+const { addTransaction} = useContext(GlobalContext)
+ const onSubmit = e => {
+  e.preventDefault();
+  const newTransaction = {
+    id:Math.floor(Math.random() * 100000000),
+    text,
+    amount: +amount,
+    transactionType
+  }
+  addTransaction(newTransaction)
+ }
+ 
   return (
+    <>
     <div className="transaction-form">
+    <h2>Add New Income or Expences</h2>
+    <form  onSubmit={onSubmit}>
         <input
           type="text"
           placeholder="Enter Transaction"
@@ -16,25 +37,26 @@ const AddTransaction = ({addTransaction, text, setText, amount, setAmount,transa
         />
        <input
           type="radio"
-          id="expenses"
           name="transactionType"
-          value="expenses"
-          checked={transactionType === 'expenses'}
+          value="Expenses"
+          checked={transactionType === 'Expenses'}
           onChange={(e) => settransactionType(e.target.value)}
-        />
-        <label htmlFor="expenses">Expenses</label>
+        /><label  className="red"
+        htmlFor="Expenses">Expenses</label>
       
         <input
           type="radio"
-          id="income"
           name="transactionType"
-          value="income"
-          checked={transactionType === 'income'}
+          value="Income"
+          checked={transactionType === 'Income'}
           onChange={(e) => settransactionType(e.target.value)}
-        />
-     <label htmlFor="expenses">Income</label>
-        <button onClick={addTransaction}>Add Transaction</button>
+        /><label className='green' htmlFor="Income">Income</label>
+
+        <button>Add Transaction</button>
+
+      </form>
       </div>
+      </>
   )
 }
 
