@@ -16,6 +16,8 @@ const { addTransaction} = useContext(GlobalContext)
     transactionType
   }
   addTransaction(newTransaction)
+  setText('')
+  setAmount('')
  }
  
   return (
